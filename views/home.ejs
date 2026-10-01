@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameHub</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <%- include("partials/nav") %>
+
+    <main class="hero">
+
+        <h1>🎮 GameHub</h1>
+
+        <h2>Encontre seu próximo jogo</h2>
+
+        <p>
+            Explore jogos, categorias, notas e plataformas
+            em um só lugar.
+        </p>
+
+        <a class="botao destaque" href="/jogos">
+            🎮 Explorar jogos
+        </a>
+
+    </main>
+
+
+    <section class="destaques">
+
+        <h2>🎮 Jogos em destaque</h2>
+
+        <div class="lista-jogos">
+
+            <% jogos.forEach(jogo => { %>
+
+                <div class="card-jogo">
+                    <img src="<%= jogo.imagem %>" alt="<%= jogo.nome %>">
+                    <h3><%= jogo.nome %></h3>
+
+                    <p>🎯 Gênero: <%= jogo.genero %></p>
+
+                    <p>💻 Plataforma: <%= jogo.plataforma %></p>
+
+                    <p>⭐ Nota: <%= jogo.nota %></p>
+
+                    <a class="botao" href="/jogos/<%= jogo.id %>">
+                        Ver detalhes
+                    </a>
+
+                </div>
+
+            <% }) %>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

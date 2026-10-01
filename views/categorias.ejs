@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Categorias - GameHub</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include("partials/nav") %>
+    <h1>🎮 GameHub</h1>
+
+    <h2>Categorias de Jogos</h2>
+
+    <div class="lista-jogos">
+
+        <% categorias.forEach(categoria => { %>
+
+            <div class="card-jogo">
+
+                <h3>🎯 <%= categoria %></h3>
+
+                <a class="botao" href="/categorias/<%= categoria %>">
+                    Ver jogos
+                </a>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+    <br>
+
+    <a class="botao" href="/">
+        ← Voltar para o início
+    </a>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #05020f;
+    background-image: url("/img/background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 30px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lista-jogos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card-jogo {
+    background-color: rgba(10, 5, 30, 0.75);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.2s;
+    border: 1px solid rgba(108, 92, 231, 0.35);
+}
+
+.card-jogo:hover {
+    transform: translateY(-5px);
+}
+
+.card-jogo h3 {
+    margin-bottom: 12px;
+}
+
+.card-jogo p {
+    margin-bottom: 8px;
+    color: #cccccc;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #6c5ce7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(10, 5, 30, 0.75);
+    padding: 15px 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a:hover {
+    color: #6c5ce7;
+}
+.hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 80px auto;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #cccccc;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.destaque {
+    font-size: 18px;
+    padding: 14px 25px;
+}
+.destaques {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.destaques h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    background: transparent;
+    padding: 0;
+}
+.card-jogo img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+/* PÁGINA DE DETALHES */
+
+.detalhes {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.detalhes-imagem img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.detalhes-info {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.detalhes-info h1 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.detalhes-info p {
+    color: #cccccc;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.nota {
+    display: inline-block;
+    background-color: #6c5ce7;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.descricao {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.descricao h2 {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+
+    .detalhes {
+        grid-template-columns: 1fr;
+    }
+
+    .detalhes-imagem img {
+        height: 350px;
+    }
+
+}
+.pesquisa {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.pesquisa input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 16px;
+}
+
+.pesquisa input::placeholder {
+    color: #999;
+}
+
+.pesquisa button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6c5ce7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pesquisa button:hover {
+    opacity: 0.85;
+}
+.filtros {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.filtros span {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.filtros a {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 5px;
+    background-color: #1e1e1e;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.filtros a:hover {
+    background-color: #6c5ce7;
+}

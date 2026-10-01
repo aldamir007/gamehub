@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= jogo.nome %> - GameHub</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <%- include("partials/nav") %>
+
+    <main class="detalhes">
+
+        <div class="detalhes-imagem">
+
+            <img src="<%= jogo.imagem %>" alt="<%= jogo.nome %>">
+
+        </div>
+
+        <div class="detalhes-info">
+
+            <h1>🎮 <%= jogo.nome %></h1>
+
+            <div class="nota">
+                ⭐ <%= jogo.nota %> / 10
+            </div>
+
+            <p>
+                <strong>🎯 Gênero:</strong>
+                <%= jogo.genero %>
+            </p>
+
+            <p>
+                <strong>💻 Plataforma:</strong>
+                <%= jogo.plataforma %>
+            </p>
+
+            <p>
+                <strong>📅 Ano:</strong>
+                <%= jogo.ano %>
+            </p>
+
+            <p>
+                <strong>🏢 Desenvolvedora:</strong>
+                <%= jogo.desenvolvedora %>
+            </p>
+
+            <div class="descricao">
+
+                <h2>📖 Sobre o jogo</h2>
+
+                <p>
+                    <%= jogo.descricao %>
+                </p>
+
+            </div>
+
+            <a class="botao" href="/jogos">
+                ← Voltar para jogos
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

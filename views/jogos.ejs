@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jogos - GameHub</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <h1>🎮 GameHub</h1>
+
+    <h2>Lista de Jogos</h2>
+    <form class="pesquisa" action="/jogos" method="GET">
+
+        <input
+            type="text"
+            name="busca"
+            placeholder="🔎 Pesquisar jogo..."
+            value="<%= busca %>"
+        >
+    
+        <button type="submit">
+            Pesquisar
+        </button>
+    
+    </form>
+    <div class="filtros">
+
+        <span>Filtrar por gênero:</span>
+    
+        <a href="/jogos">Todos</a>
+    
+        <a href="/jogos?genero=Sandbox">Sandbox</a>
+    
+        <a href="/jogos?genero=Aventura">Aventura</a>
+    
+        <a href="/jogos?genero=Metroidvania">Metroidvania</a>
+    
+        <a href="/jogos?genero=Simulação">Simulação</a>
+    
+        <a href="/jogos?genero=Ação">Ação</a>
+    
+        <a href="/jogos?genero=Roguelike">Roguelike</a>
+    
+        <a href="/jogos?genero=Plataforma">Plataforma</a>
+    
+    </div>
+
+    <div class="lista-jogos">
+
+        <% jogos.forEach(jogo => { %>
+
+            <div class="card-jogo">
+
+                <h3><%= jogo.nome %></h3>
+
+                <p>🎯 Gênero: <%= jogo.genero %></p>
+
+                <p>💻 Plataforma: <%= jogo.plataforma %></p>
+
+                <p>⭐ Nota: <%= jogo.nota %></p>
+
+                <a class="botao" href="/jogos/<%= jogo.id %>">
+                    Ver detalhes
+                </a>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+    <br>
+
+    <a class="botao" href="/">← Voltar para o início</a>
+
+</body>
+
+</html>
